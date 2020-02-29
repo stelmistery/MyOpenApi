@@ -1,0 +1,46 @@
+get:
+  summary: "Чарт"
+  tags: ["Плейлист"]
+  description: "Запрос на получение чарта музыки в России"
+  responses:
+    '200':
+      description: OK
+      content:
+        applications/json:
+          schema:
+            properties:
+              chart:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    artist: 
+                      type: string
+                      example: 'Bon Jovi'
+                    name: 
+                      type: string
+                      example: 'Its my life'
+    '400':
+      description: 'Bad request'
+      content:
+        applications/json:
+          schema:
+            properties:
+              errors:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Вери бэд реквест"
+
+      
+                    
+
+
+
+
+
+

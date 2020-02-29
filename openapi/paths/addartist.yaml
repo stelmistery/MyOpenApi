@@ -1,0 +1,41 @@
+parameters:
+  - $ref: ../components/parameters/organizationId.yaml
+
+post:
+  summary: "Добавить исполнителя"
+  description: "Добавление нового исполнителя"
+  tags:
+    - Artist
+  security: 
+  - bearerAuth: []
+  operationId: addArtist
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+          example:   
+            id: 10
+            name: Jessica Smith
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+         schema:
+            properties:
+              artistID:
+                type: string
+                example: 3443123
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

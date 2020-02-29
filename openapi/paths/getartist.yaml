@@ -1,0 +1,45 @@
+get:
+  summary: "Исполнитель"
+  description: "Запрос на получение исполнителя и его треков"
+  tags:
+    - Artist
+  parameters:
+      - name: id
+        in: path
+        description: Artist ID
+        required: true
+        schema:
+          type: integer
+          format: int64
+  responses:
+    '200':
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            properties:  
+              Artist:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  name:
+                    type: string
+                required:
+                  - id
+                  - name
+              PlayList:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    artist: 
+                      type: string
+                      example: 'Bon Jovi'
+                    name: 
+                      type: string
+                      example: 'Its my life'

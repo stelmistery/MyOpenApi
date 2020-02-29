@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "start": "openapi preview-docs",
+        "build": "openapi bundle -o dist",
+        "test": "openapi validate"
+    },
+    "name": "labs3ofkis",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "stelmistery <stelmistery@yandex.ru>",
+    "license": "MIT",
+    "dependencies": {
+        "@redocly/openapi-cli": "^0.8.3",
+        "redoc": "^2.0.0-rc.23"
+    }
+}

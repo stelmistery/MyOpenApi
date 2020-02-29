@@ -1,0 +1,47 @@
+get:
+  summary: "Подкасты"
+  description: "Запрос на получение подкастов"
+  tags: ["Плейлист"]
+  responses:
+    '200':
+      description: OK
+      content:
+        applications/json:
+          schema:
+            properties:
+              topical:
+                type: array
+                description: "Список акутальных подкастов"
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    name: 
+                      type: string
+                      example: 'Вопрос учёному'
+              Chart:
+                type: array
+                description: "Чарт подкастов"
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    name: 
+                      type: string
+                      example: 'В предыдущих сериях'
+              Yandex Podcast:
+                type: array
+                description: "Подкасты Яндекса"
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    name: 
+                      type: string
+                      example: 'Войти в IT'

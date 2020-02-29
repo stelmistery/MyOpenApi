@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  version: '1.0'
+  title: REST API
+  contact:
+    name: Wil Ascension
+    email: vlados.stelme@mail.ru
+servers:
+  - url: 'https://music.9andex.ru/'
+    description: Live Server
+tags:
+  - name: Раздел
+    description:
+      Описание раздела
+      в несколько
+      строк
+security:
+  - SecretApiKey: []
+  - JWT: []
+paths:
+  /chart:
+    $ref: ./paths/chart.yaml
+  /non-music:
+    $ref: ./paths/non-music.yaml
+  /artist/{id}:
+    $ref: ./paths/getartist.yaml
+  /addartist:
+    $ref: ./paths/addartist.yaml
+  /auth:
+    $ref: ./paths/auth.yaml
+  /register:
+    $ref: ./paths/createuser.yaml
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
