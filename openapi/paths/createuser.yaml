@@ -11,11 +11,9 @@ post:
           properties:
             email:
               type: string
-              required: true
               example: "stelmistery@yandex.ru"
             password:
               type: string
-              required: true
               example: "123qwerty123"
   responses:
     "200":
