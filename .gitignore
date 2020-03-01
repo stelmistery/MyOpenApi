@@ -2,4 +2,3 @@
 *.log
 .vscode/
 .idea/
-dist/
